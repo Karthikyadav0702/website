@@ -46,20 +46,21 @@ a {
 .head {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     background: #111933;
-    height: 300px;
+    height: 10%;
     width: 100%;
     margin: 0px;
     padding: 0px;
-    width: 100%;
 }
 
-img {
-    height: 80%;
-    width: 0px;
-    margin: 0px;
-    padding: 0px;
-    flex: 1 1 80%;
+.head-2 {
+    flex: 1 0 100%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
 }
 
 
@@ -76,16 +77,14 @@ ul.head-container {
 }
 
 .head-container {
-    flex: 1 1 100%;
+    flex: 1 0 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
 }
 
 
 .container0 {
-    border: solid red;
+    width: 100%;
     margin: 0px;
     display: grid;
     height: 900px;
@@ -129,12 +128,7 @@ ul.head-container {
 
 /*container-items*/
 
-.head2,
-.head3,
-.head4,
-.head5,
-.head6,
-.head7 {
+li {
 
     flex: 1 0 auto;
     padding: 0px;
@@ -260,4 +254,76 @@ input {
     height: 20px;
     margin: 0px;
     border: solid white;
+}
+
+@media screen and (max-width: 900px) {
+
+    .container0 {
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+
+    }
+
+    .just {
+        padding: 0px;
+        flex: 1 0 100%;
+    }
+
+    .container1 {
+
+        background: #4e2a47;
+        flex: 1 0 100px;
+
+
+    }
+
+    .container3 {
+        background: #4e2a47;
+        flex: 1 0 100px;
+    }
+
+    ul.head-container {
+        border: solid #dbdbf6 2px;
+        margin: 0px;
+    }
+
+    .head-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px 1%;
+    }
+
+    li {
+        border-left: solid #dbdbf6 2px;
+    }
+
+    li.head2,
+    li.head4,
+    li.head6 {
+        border-left: none #dbdbf6 2px;
+    }
+
+    .head {
+        background: #111933;
+        height: 5%;
+        margin: 0px;
+        padding: 5px;
+        width: auto;
+    }
+
+    .head-2 {
+        flex: 1 0 100%;
+        padding: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
 }
